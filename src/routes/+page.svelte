@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<h1>D.O.R.I.</h1>
+<h1>D.O.R.Y.</h1>
 
 <div class="bento-grid">
 	<a href="/taches" class="card lists">
