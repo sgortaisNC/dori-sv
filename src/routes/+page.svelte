@@ -6,7 +6,7 @@
 
 <div class="bento-grid">
 	<div class="card lists" transition:fade>
-		<h2>Listes</h2>
+		<h2>To do list</h2>
 	</div>
 	
 	<div class="card planning" transition:fade>
@@ -49,6 +49,7 @@
 	
 	.card {
 		background: #2d2438;
+		text-align: center;
 		border-radius: 1rem;
 		padding: 1.5rem;
 		box-shadow: 0 4px 15px -1px rgba(139, 92, 246, 0.1);
@@ -79,23 +80,6 @@
 	.icon {
 		font-size: 2.5rem;
 		filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
-	}
-	
-	.sub-items {
-		display: flex;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
-	
-	.sub-items span {
-		background: #3b2b4f;
-		padding: 0.25rem 0.75rem;
-		border-radius: 9999px;
-		font-size: 0.875rem;
-		color: #00ff9d;
-		font-weight: 500;
-		letter-spacing: 0.5px;
-		border: 1px solid rgba(0, 255, 157, 0.3);
 	}
 	
 	/* Couleurs spécifiques pour chaque carte */
