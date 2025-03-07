@@ -150,20 +150,22 @@
         padding: 1rem;
         max-width: 1200px;
         margin: 0 auto;
+        flex-direction: column;
     }
 
     .categories-nav {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1rem;
-        min-width: 200px;
+        width: 100%;
     }
 
     .category-btn {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 0.5rem;
-        padding: 1rem;
+        padding: 0.75rem;
         background: #2d2438;
         border: none;
         border-left: 3px solid var(--accent-color);
@@ -171,6 +173,8 @@
         color: #e9d8fd;
         cursor: pointer;
         transition: all 0.2s ease;
+        width: 100%;
+        font-size: 0.9rem;
     }
 
     .category-btn:hover, .category-btn.active {
@@ -186,12 +190,13 @@
         flex: 1;
         background: #2d2438;
         border-radius: 1rem;
-        padding: 2rem;
+        padding: 1.5rem;
+        width: 100%;
     }
 
     .category-content h2 {
         color: #e9d8fd;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -200,6 +205,7 @@
         display: flex;
         gap: 1rem;
         margin-bottom: 2rem;
+        flex-wrap: wrap;
     }
 
     .add-todo input {
@@ -225,6 +231,7 @@
         font-weight: bold;
         cursor: pointer;
         transition: all 0.2s ease;
+        min-width: 100px;
     }
 
     .add-btn:hover {
@@ -233,9 +240,9 @@
     }
 
     .todos-list {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .todo-item {
@@ -262,6 +269,7 @@
         position: relative;
         width: 24px;
         height: 24px;
+        flex-shrink: 0;
     }
 
     .checkbox-container input {
@@ -310,8 +318,122 @@
         transform: rotate(45deg);
     }
 
+    .todo-content {
+        flex: 1;
+        min-width: 0;
+    }
+
     .todo-text {
         flex: 1;
         color: #e9d8fd;
+        word-break: break-word;
+        line-height: 1.4;
+    }
+
+    @media (min-width: 768px) {
+        .todos-container {
+            flex-direction: row;
+        }
+
+        .categories-nav {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            flex-shrink: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .todos-container {
+            padding: 0.5rem;
+        }
+
+        .todos-content {
+            padding: 1rem;
+        }
+
+        .category-content h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .add-todo {
+            flex-direction: column;
+            margin-bottom: 1rem;
+            gap: 0.5rem;
+        }
+
+        .add-todo input {
+            min-width: 0;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .todos-list {
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        .todo-item {
+            padding: 0.75rem;
+            gap: 0.75rem;
+        }
+
+        .todo-text {
+            font-size: 0.9rem;
+        }
+
+        .checkbox-container {
+            width: 20px;
+            height: 20px;
+        }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+        }
+
+        .checkbox-container .checkmark:after {
+            left: 6px;
+            top: 3px;
+            width: 4px;
+            height: 8px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .todos-container {
+            padding: 0.25rem;
+        }
+
+        .categories-nav {
+            gap: 0.5rem;
+        }
+
+        .category-btn {
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            gap: 0.25rem;
+        }
+
+        .category-icon {
+            font-size: 1rem;
+        }
+
+        .todos-content {
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+        }
+
+        .todo-item {
+            padding: 0.5rem;
+            gap: 0.5rem;
+        }
     }
 </style> 
