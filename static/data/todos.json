@@ -1,0 +1,58 @@
+{
+  "categories": [
+    {
+      "id": "courses",
+      "name": "Liste de Courses",
+      "icon": "🛒",
+      "color": "#00ff9d",
+      "items": [
+        {
+          "id": "c1",
+          "text": "Fruits et légumes",
+          "done": false
+        },
+        {
+          "id": "c2",
+          "text": "Lait et produits laitiers",
+          "done": true
+        }
+      ]
+    },
+    {
+      "id": "menage",
+      "name": "Tâches Ménagères",
+      "icon": "🧹",
+      "color": "#ff00ff",
+      "items": [
+        {
+          "id": "m1",
+          "text": "Passer l'aspirateur",
+          "done": false
+        },
+        {
+          "id": "m2",
+          "text": "Laver les vitres",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "mensuel",
+      "name": "À Faire ce Mois",
+      "icon": "📅",
+      "color": "#00ffff",
+      "items": [
+        {
+          "id": "mm1",
+          "text": "Payer les factures",
+          "done": true
+        },
+        {
+          "id": "mm2",
+          "text": "Rendez-vous dentiste",
+          "done": false
+        }
+      ]
+    }
+  ]
+} 

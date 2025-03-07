@@ -1,37 +1,39 @@
 <script>
-	import { fade } from 'svelte/transition';
 </script>
 
 <h1>D.O.R.I.</h1>
 
 <div class="bento-grid">
-	<div class="card lists" transition:fade>
+	<a href="/taches" class="card lists">
 		<h2>To do list</h2>
-	</div>
+		<div class="card-content">
+			<span class="icon">📝</span>
+		</div>
+	</a>
 	
-	<div class="card planning" transition:fade>
+	<a href="/agenda" class="card planning">
 		<h2>Planning</h2>
 		<div class="card-content">
 			<span class="icon">📅</span>
 		</div>
-	</div>
+	</a>
 	
-	<div class="card recipes" transition:fade>
+	<a href="/recettes" class="card recipes">
 		<h2>Recettes & Menu</h2>
 		<div class="card-content">
 			<span class="icon">🍳</span>
 		</div>
-	</div>
+	</a>
 	
-	<div class="card gifts" transition:fade>
+	<a href="/cadeaux" class="card gifts">
 		<h2>Liste de Cadeaux & Projets</h2>
 		<div class="card-content">
 			<span class="icon">🎁</span>
 		</div>
-	</div>
+	</a>
 </div>
 
-<style>	
+<style>
 	h1 {
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
@@ -53,9 +55,10 @@
 		border-radius: 1rem;
 		padding: 1.5rem;
 		box-shadow: 0 4px 15px -1px rgba(139, 92, 246, 0.1);
-		transition: all 0.3s ease;
+		transition: all 0.2s ease;
 		cursor: pointer;
 		border: 1px solid rgba(139, 92, 246, 0.1);
+		text-decoration: none;
 	}
 	
 	.card:hover {
@@ -98,12 +101,5 @@
 	.gifts { 
 		background: linear-gradient(135deg, #2d2438 0%, #3b2b4f 100%);
 		border-left: 3px solid #ffff00;
-	}
-	
-	:global(body) {
-		background: #1a1625;
-		color: #e9d8fd;
-		margin: 0;
-		padding: 0;
 	}
 </style>
